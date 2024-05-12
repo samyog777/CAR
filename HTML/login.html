@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="toggleIcon"><i class="fa-solid fa-eye"></i></span>
+        <br><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <div class="Other">
+        <div class="Box">
+            <span>Do not have an account ? </span>
+            <button id="signup" class="btn" onclick="navigate('signup.html')">Signup</button>
+        </div>
+        <div class="Box">
+            <span>Continue Without Login ? </span>
+            <button id="home" class="btn" onclick="navigate('../PHP/index.php')">Home</button>
+        </div>
+    </div>
+
+    <div id="error" style="color: red;"></div>
+
+    <script>
+        // Get the password input element and the toggle icon element
+        var passwordField = document.getElementById("password");
+        var toggleIcon = document.getElementById("toggleIcon");
+
+        // Add a click event listener to the toggle icon
+        toggleIcon.addEventListener("click", function () {
+            // Toggle the type attribute of the password input field between "password" and "text"
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+
+            // Toggle the class of the <i> element between "fa-eye" and "fa-eye-slash"
+            toggleIcon.querySelector("i").classList.toggle("fa-eye");
+            toggleIcon.querySelector("i").classList.toggle("fa-eye-slash");
+        });
+
+
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Retrieve email and password from form
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // AJAX request to check credentials
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../PHP/login.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.status === "success") {
+                        window.location.href = "../PHP/index.php"; // Redirect to index.php if credentials are correct
+                    } else {
+                        document.getElementById("error").innerHTML = response.message; // Display error message
+                    }
+                }
+            };
+            xhr.send("email=" + email + "&password=" + password);
+        });
+    </script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

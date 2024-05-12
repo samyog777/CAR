@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    font-size: 1.3em;
+}
+
+form {
+    width: 40%;
+    padding: 5%;
+    background-color: #fff;
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.3em;
+}
+
+#toggleIcon {
+    position: relative;
+}
+
+#toggleIcon i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+}
+
+input[type="submit"] {
+    width: 35%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1.3em;
+    margin-left: 65%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.options {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options span {
+    font-size: 14px;
+}
+
+.options button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.options button:hover {
+    color: #0056b3;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Other {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    gap: 10em;
+}
+
+.Box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: 1.5em;
+}
+
+.btn {
+    cursor: pointer;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    /* background-color: red; */
+    font-size: 1em;
+}
+
+#home {
+    font-weight: 700;
+    background-color: #030459;
+    color: white;
+}
+
+#signup {
+    background-color: white;
+    text-decoration: underline;
+    color: blue;
+}

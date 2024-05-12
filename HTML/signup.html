@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+
+<body>
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="POST" class="signup-form">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="pass">
+                <input type="password" id="password" name="password" required>
+                <span class="toggleIcon"><i class="fa-solid fa-eye"></i></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password:</label>
+            <div class="pass">
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <span class="toggleIcon"><i class="fa-solid fa-eye"></i></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Sign Up">
+        </div>
+    </form>
+    <div class="Other">
+        <div class="Box">
+            <span>Already have an account ? </span>
+            <button id="login" class="btn" onclick="navigate('login.html')">Login</button>
+        </div>
+        <div class="Box">
+            <span>Continue Without Login ? </span>
+            <button id="home" class="btn" onclick="navigate('../PHP/index.php')">Home</button>
+        </div>
+    </div>
+    <script>
+        // Get the password input elements and the toggle icon elements
+        var passwordField = document.getElementById("password");
+        var confirmPasswordField = document.getElementById("confirm_password");
+        var toggleIcons = document.querySelectorAll(".toggleIcon");
+
+        // Add a click event listener to each toggle icon
+        toggleIcons.forEach(function (toggleIcon) {
+            toggleIcon.addEventListener("click", function () {
+                // Toggle the type attribute of the password input field between "password" and "text"
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    confirmPasswordField.type = "text";
+                } else {
+                    passwordField.type = "password";
+                    confirmPasswordField.type = "password";
+                }
+                // Toggle the class of the clicked <i> element between "fa-eye" and "fa-eye-slash"
+                toggleIcon.querySelector("i").classList.toggle("fa-eye");
+                toggleIcon.querySelector("i").classList.toggle("fa-eye-slash");
+            });
+        });
+
+    </script>
+
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

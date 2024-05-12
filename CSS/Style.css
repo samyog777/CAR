@@ -1,0 +1,22 @@
+Body
+body {
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.CARS {
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin-left: 2.5%; */
+    /* margin-top: 2em; */
+    /* gap: 3em; */
+}
+

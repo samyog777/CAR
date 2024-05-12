@@ -1,0 +1,250 @@
+/* For Add Section */
+.ADDCARS {
+    margin-top: 5em;
+    /* align-items: center; */
+    /* margin-top: 3em; */
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.Basic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4em;
+    font-size: 2em;
+    /* background-color: red; */
+    padding: 10px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.NAME {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.Name input {
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.SubName {
+    font-size: 0.9em;
+}
+
+.SubName input {
+    font-size: 0.8em;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.Date input {
+    font-size: 1em;
+}
+
+/* Exterior Feature */
+.Exterior {
+    padding: 10px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* 
+.Exterior h2 {
+    font-size: 1.8em;
+} */
+
+.Radios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: 1.6em;
+}
+
+.box {
+    font-size: 1em;
+}
+
+select {
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* System */
+.System {
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 80%;
+}
+
+.ADDITEMS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.ITEMINPUT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80em;
+}
+
+.System input {
+    font-size: 1.5em;
+    border-radius: 10px;
+    /* border: none; */
+    padding: 10px;
+    width: 18em;
+}
+
+.System button {
+    font-size: 2em;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+    color: white;
+}
+
+.System button:hover {
+    background-color: rgb(15, 168, 15);
+    transition: 0.5s all ease-out;
+}
+
+.items {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.items ul {
+    list-style-type: disc;
+    font-size: 1.5em;
+}
+
+/* Engine */
+.Engine {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 2em;
+    /* background-color: pink; */
+}
+
+.Engine input {
+    font-size: 0.8em;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Safety */
+#SaftyHeading {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.Safety {
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.Safety1,
+.Safety2,
+.Safety3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.airbag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    gap: 1.5em;
+}
+
+.airbag label {
+    font-size: 2em;
+}
+
+/* sensors */
+.sensors {
+    background-color: blue;
+}
+
+/* USB */
+.USB {
+    background-color: green;
+}
+
+/* Other */
+.Other {
+    background-color: black;
+    color: white;
+}
+
+#CarArea {
+    font-size: 2em;
+}
+
+.SUBMIT {
+    position: relative;
+    font-size: 3em;
+    margin: 1em;
+    background-color: darkcyan;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    bottom: 0em;
+    right: -13em;
+}
+
+.SUBMIT:hover {
+    background-color: rgb(11, 185, 185);
+    transition: 0.5s background-color ease-out;
+}
+
+/* Other */
+textarea {
+    padding: 10px;
+}

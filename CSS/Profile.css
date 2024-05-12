@@ -1,0 +1,60 @@
+/* Profile Page */
+.profile-container {
+    width: 60%;
+    margin: 5em auto 0;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.profile-container h1 {
+    text-align: center;
+}
+
+.profile-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
