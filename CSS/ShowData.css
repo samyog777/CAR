@@ -1,6 +1,15 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #fef8f8;
-    color: black;
 }
 
 .cards {
@@ -12,7 +21,6 @@ body {
     margin: 1em 2em;
     padding: 0;
     list-style-type: none;
-    z-index: -1;
 }
 
 .card {
@@ -23,7 +31,6 @@ body {
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
-    z-index: -1;
 }
 
 .card__image {
@@ -70,6 +77,7 @@ body {
 
 .card__arc path {
     fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
 .card:hover .card__header {
@@ -105,12 +113,17 @@ body {
 .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    color: #aa8497;
+    color: rgb(90, 90, 90);
     font-family: "MockFlowFont";
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+}
+
+#About_Car {
+    -webkit-line-clamp: 8;
+    font-size: 0.9em;
 }
 
 .main {

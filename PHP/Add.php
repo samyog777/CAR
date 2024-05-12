@@ -32,13 +32,13 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../CSS/Add.css">
+        <link rel="stylesheet" href="../CSS/AddCar.css">
 </head>
 
 <body>
     <?php include 'NavBar.php'; ?>
     <form class="ADDCARS" id="carForm" enctype="multipart/form-data" action="data.php" method="POST">
-        <h1>-- Fill The Information To Add Car --</h1>
+        <h1 style="font-size: 3em; padding-top: 1em;">-- Fill The Information To Add Car --</h1>
         <div class="Basic">
             <div class="NAME">
                 <div class="Name">
@@ -61,6 +61,11 @@ if (isset($_GET['logout'])) {
                 <div class="box">
                     <label for="">Color Choice</label>
                     <select name="color" id="color">
+
+                        <option value="Dimond Blue">White</option>
+                        <option value="Dimond Blue">Grey</option>
+                        <option value="Dimond Blue">Green</option>
+                        <option value="Dimond Blue">Red</option>
                         <option value="Dimond Blue">Dimond Blue</option>
                         <option value="Dimond Blue">Love Pink</option>
                         <option value="Dimond Blue">Blood Red</option>
@@ -148,8 +153,8 @@ if (isset($_GET['logout'])) {
             <h2>Other Information </h2>
             <textarea name="aboutCar" id="CarArea" cols="90" rows="15"></textarea>
         </div>
-        <div>
-            <label for="image_url">Image URL:</label>
+        <div class="IMAGE_URL">
+            <label for="image_url" class="image_url">Image URL:</label>
             <input type="text" name="image_url" id="image_url" required>
         </div>
         <button onclick="navigate('index.php')" type="submit" class="SUBMIT" id="submitButton">Add Car</button>

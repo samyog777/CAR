@@ -244,6 +244,27 @@ select {
     transition: 0.5s background-color ease-out;
 }
 
+.IMAGE_URL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.image_url {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#image_url {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px 100px 10px 100px;
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
 /* Other */
 textarea {
     padding: 10px;

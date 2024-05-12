@@ -62,7 +62,7 @@ try {
                 <p class="card__description">USB Ports: <?php echo $car['usb_ports']; ?></p>
               </div>
               <div class="about">
-                <p class="card__description">About Car: <?php echo $car['about_car']; ?></p>
+                <p class="card__description" id="About_Car">About Car: <?php echo $car['about_car']; ?></p>
               </div>
             </div>
           </div>
