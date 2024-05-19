@@ -19,9 +19,9 @@ $email = $_POST['email'];
 
 // Update user details in the database
 $servername = "localhost";
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "user_authentication"; // Replace with your database name
+$username = "root"; 
+$password = ""; 
+$dbname = "user_authentication"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

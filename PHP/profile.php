@@ -29,9 +29,9 @@ $user_id = $_SESSION['user_id'];
 if (isset($user_id)) {
     // Retrieve user details from database
     $servername = "localhost";
-    $username = "root"; // Replace with your database username
-    $password = ""; // Replace with your database password
-    $dbname = "user_authentication"; // Replace with your database name
+    $username = "root"; 
+    $password = ""; 
+    $dbname = "user_authentication"; 
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

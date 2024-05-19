@@ -25,12 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind SQL statement
     $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
+    if ($stmt === false) {
+        die("Prepare failed: " . $conn->error);
+    }
     $stmt->bind_param("ssss", $firstname, $lastname, $email, $hashed_password);
 
     // Execute the statement
     if ($stmt->execute()) {
         echo "User registered successfully!";
-        header("Location: index.php");
+        header("Location: ../HTML/login.html");
+        exit(); // Make sure to exit after redirection
     } else {
         echo "Error: " . $stmt->error;
     }
